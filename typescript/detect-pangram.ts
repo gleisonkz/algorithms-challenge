@@ -9,7 +9,6 @@ porque usa todas as letras de A-Z pelo menos uma vez (maiúsculas e minúsculas 
 */
 
 function isPangram(sentence: string) {
-  const letters = [..."abcdefghijklmnopqrstuvwxyz"];
   const lowerCaseSentence = [...sentence]
     .map((letter) =>
       letter
@@ -18,7 +17,7 @@ function isPangram(sentence: string) {
         .replace(/[\u0300-\u036f]/g, "")
     )
     .join();
-  return [...letters].every((letter) => lowerCaseSentence.includes(letter));
+  return new Set(lowerCaseSentence.match(/[a-z]/g)).size === 26;
 }
 const example1 = isPangram("The quick brown fox jumps over the lazy dog");
 const example2 = isPangram("Thé quick brówn fíx jumps óver Thé lazy dóg");
