@@ -1,0 +1,17 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "Projeto com as minhas soluções dos problemas propostos no codewars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gleison de Almeida",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4"
+  }
+}
